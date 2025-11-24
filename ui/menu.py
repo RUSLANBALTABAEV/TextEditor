@@ -1,4 +1,4 @@
-from tkinter import Menu, Toplevel, Text, Scrollbar
+from tkinter import Menu, Toplevel, Text, Scrollbar, END
 from tkinter import DISABLED, RIGHT, Y, YES, BOTH
 from tkinter.messagebox import showinfo
 
@@ -29,7 +29,7 @@ class MenuManager:
         file_menu.add_command(label="Сохранить как", command=self.editor.file_manager.save_as_file, accelerator="Ctrl+Shift+S")
         file_menu.add_separator()
         file_menu.add_command(label="Новая вкладка", command=self.editor.tab_manager.new_tab, accelerator="Ctrl+T")
-        file_menu.add_command(label="Закрыть вкладку", command=self.editor.tab_manager.close_tab, accelerator="Ctrl+W")
+        file_menu.add_command(label="Закрыть вкладка", command=self.editor.tab_manager.close_tab, accelerator="Ctrl+W")
         file_menu.add_separator()
         
         # Подменю автосохранения
@@ -201,7 +201,7 @@ Copyright (c) 2024 Текстовый Редактор 3.0
 ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ,
 ЯВНО ВЫРАЖЕННЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ ГАРАНТИЯМИ
 ТОВАРНОЙ ПРИГОДНОСТИ, СООТВЕТСТВИЯ ПО ЕГО КОНКРЕТНОМУ НАЗНАЧЕНИЮ И НЕНАРУШЕНИЯ
-ПРАВ. НИ В КАКОМ СЛУЧАЕ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ
+ПРАВ. НИ В КАКОМ СЛУЧЕЕ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ
 ПО КАКИМ-ЛИБО ИСКАМ, ЗА УЩЕРБ ИЛИ ПО ИНЫМ ТРЕБОВАНИЯМ, В ТОМ ЧИСЛЕ, ПРИ
 ДЕЙСТВИИ КОНТРАКТА, ДЕЛИКТЕ ИЛИ ИНОЙ СИТУАЦИИ, ВОЗНИКШИМ ИЗ-ЗА ИСПОЛЬЗОВАНИЯ
 ПРОГРАММНОГО ОБЕСПЕЧЕНИЕМ.
