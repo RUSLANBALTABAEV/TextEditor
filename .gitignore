@@ -118,5 +118,7 @@ dmypy.json
 backups
 backups/*
 
-# Files
+# Directories & Files
 *.txt
+plugins
+plugins/*
