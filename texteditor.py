@@ -330,7 +330,7 @@ class TextEditor:
         if not current_tab_info:
             return
             
-        # Проверяем是否需要 сохранить
+        # Проверяем сохранить
         if current_tab_info['modified']:
             content = current_tab_info['text_area'].get(1.0, END)
             if len(content.strip()) > 0 and content != '\n':
