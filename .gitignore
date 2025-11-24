@@ -113,3 +113,10 @@ celerybeat-schedule
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# backups
+backups
+backups/*
+
+# Files
+*.txt
