@@ -26,7 +26,7 @@ class FileManager:
             current_tab_info['modified'] = False
             current_tab_info['name'] = "Новый файл"
             self.editor.tab_manager.tab_control.tab(current_tab_info['frame'], text="Новый файл")
-            self.editor.root.title("Текстовый Редактор 2.0 - Новый файл")
+            self.editor.root.title("Текстовый Редактор 3.0 - Новый файл")
             self.editor.update_status()
             
     def open_file(self, file_path=None):
@@ -109,7 +109,7 @@ class FileManager:
                 current_tab_info['modified'] = False
                 current_tab_info['name'] = os.path.basename(file_path)
                 self.editor.tab_manager.tab_control.tab(current_tab_info['frame'], text=current_tab_info['name'])
-                self.editor.root.title(f"Текстовый Редактор 2.0 - {current_tab_info['name']}")
+                self.editor.root.title(f"Текстовый Редактор 3.0 - {current_tab_info['name']}")
                 self.editor.status_bar.set_text("Файл сохранен")
                 
             except Exception as e:
