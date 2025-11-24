@@ -65,6 +65,10 @@ docs/_build
 # PyInstaller
 *.manifest
 *.spec
+*.exe
+TextEditor.exe_extracted/*.exe
+build/*
+dist/*
 
 # Installer logs
 pip-log.txt
