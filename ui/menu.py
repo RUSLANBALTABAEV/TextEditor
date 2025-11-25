@@ -185,7 +185,7 @@ F1 - Справка
         license_text = """
 MIT License
 
-Copyright (c) 2024 Текстовый Редактор 3.3
+Copyright (c) 2024 Текстовый Редактор 3.4
 
 Данная лицензия разрешает лицам, получившим копию данного программного обеспечения
 и сопутствующей документации (в дальнейшем «Программное обеспечение»), безвозмездно
@@ -208,7 +208,7 @@ Copyright (c) 2024 Текстовый Редактор 3.3
         """
         
         license_window = Toplevel(self.editor.root)
-        license_window.title("Лицензия MIT - Текстовый Редактор 3.3")
+        license_window.title("Лицензия MIT - Текстовый Редактор 3.4")
         license_window.geometry('700x500')
         
         text_widget = Text(license_window, wrap='word', font=('Arial', 10))
@@ -222,9 +222,9 @@ Copyright (c) 2024 Текстовый Редактор 3.3
         text_widget.pack(expand=YES, fill=BOTH, padx=10, pady=10)
                 
     def about(self):
-        about_text = """Текстовый редактор 3.3
+        about_text = """Текстовый редактор 3.4
 
-Версия 3.3
+Версия 3.4
 Лицензия: MIT License
 
 Это программное обеспечение распространяется на условиях 

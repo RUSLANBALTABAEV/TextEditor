@@ -48,6 +48,18 @@ class TextEditor:
         
     def setup_directories(self):
         """Создает необходимые директории для работы приложения"""
+        # Получаем путь к исполняемому файлу или скрипту
+        if getattr(sys, 'frozen', False):
+            # Если запущен как .exe
+            base_path = os.path.dirname(sys.executable)
+        else:
+            # Если запущен как скрипт
+            base_path = os.path.dirname(os.path.abspath(__file__))
+        
+        self.backup_dir = os.path.join(base_path, "backups")
+        self.plugins_dir = os.path.join(base_path, "plugins")
+        self.session_file = os.path.join(base_path, "session.json")
+        
         for directory in [self.backup_dir, self.plugins_dir]:
             os.makedirs(directory, exist_ok=True)
         
@@ -58,10 +70,13 @@ class TextEditor:
         else:
             datafile = os.path.join(sys.prefix, datafile)
         if os.path.exists(datafile):
-            self.root.iconbitmap(default=datafile)
+            try:
+                self.root.iconbitmap(default=datafile)
+            except:
+                pass  # Игнорируем ошибки с иконкой
 
     def setup_ui(self):
-        self.root.title("Текстовый Редактор 3.3 - Новый файл")
+        self.root.title("Текстовый Редактор 3.4 - Новый файл")
         self.root.geometry('1200x700')
         
         # Создаем компоненты UI
