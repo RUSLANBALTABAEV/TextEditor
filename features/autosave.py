@@ -28,7 +28,7 @@ class AutoSaveManager:
             for tab_id, tab_info in self.editor.tab_manager.tabs.items():
                 if tab_info['file_path'] and tab_info['modified']:
                     try:
-                        content = tab_info['text_area'].get(1.0, END)
+                        content = tab_info['text_area'].get(1.0, END)  # Здесь используется END
                         backup_name = f"autosave_{os.path.basename(tab_info['file_path'])}_{int(time.time())}.bak"
                         backup_path = os.path.join(self.editor.backup_dir, backup_name)
                         

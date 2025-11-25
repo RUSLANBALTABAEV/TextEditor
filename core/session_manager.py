@@ -1,5 +1,6 @@
 import json
 import os
+from tkinter import END
 from tkinter.messagebox import showerror
 
 class SessionManager:
@@ -18,7 +19,7 @@ class SessionManager:
         for tab_info in self.editor.tab_manager.tabs.values():
             tab_data = {
                 'file_path': tab_info['file_path'],
-                'content': tab_info['text_area'].get(1.0, END),
+                'content': tab_info['text_area'].get(1.0, END),  # Здесь используется END
                 'name': tab_info['name']
             }
             session_data['tabs'].append(tab_data)

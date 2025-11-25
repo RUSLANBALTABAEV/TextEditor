@@ -29,7 +29,7 @@ class MenuManager:
         file_menu.add_command(label="Сохранить как", command=self.editor.file_manager.save_as_file, accelerator="Ctrl+Shift+S")
         file_menu.add_separator()
         file_menu.add_command(label="Новая вкладка", command=self.editor.tab_manager.new_tab, accelerator="Ctrl+T")
-        file_menu.add_command(label="Закрыть вкладка", command=self.editor.tab_manager.close_tab, accelerator="Ctrl+W")
+        file_menu.add_command(label="Закрыть вкладку", command=self.editor.tab_manager.close_tab, accelerator="Ctrl+W")
         file_menu.add_separator()
         
         # Подменю автосохранения
