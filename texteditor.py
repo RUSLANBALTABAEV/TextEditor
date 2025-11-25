@@ -61,7 +61,7 @@ class TextEditor:
             self.root.iconbitmap(default=datafile)
 
     def setup_ui(self):
-        self.root.title("Текстовый Редактор 3.2 - Новый файл")
+        self.root.title("Текстовый Редактор 3.3 - Новый файл")
         self.root.geometry('1200x700')
         
         # Создаем компоненты UI
