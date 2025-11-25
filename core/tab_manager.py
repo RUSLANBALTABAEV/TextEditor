@@ -19,8 +19,9 @@ class TabManager:
         self.tab_control.pack(expand=1, fill=BOTH)
         self.tab_control.bind("<<NotebookTabChanged>>", self.on_tab_changed)
         
-        # Создаем первую вкладку
-        self.new_tab()
+        # Создаем первую вкладку только если нет других вкладок
+        if not self.tabs:
+            self.new_tab()
         
     def new_tab(self, file_path=None, content=None):
         frame = Frame(self.tab_control)

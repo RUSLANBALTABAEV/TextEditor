@@ -19,7 +19,7 @@ class SessionManager:
         for tab_info in self.editor.tab_manager.tabs.values():
             tab_data = {
                 'file_path': tab_info['file_path'],
-                'content': tab_info['text_area'].get(1.0, END),  # Здесь используется END
+                'content': tab_info['text_area'].get(1.0, END),
                 'name': tab_info['name']
             }
             session_data['tabs'].append(tab_data)
@@ -42,9 +42,10 @@ class SessionManager:
                 self.editor.auto_save = session_data.get('auto_save', False)
                 self.editor.auto_save_interval = session_data.get('auto_save_interval', 300000)
                 
-                # Восстанавливаем вкладки
-                for tab_data in session_data.get('tabs', []):
-                    self.editor.tab_manager.new_tab(tab_data['file_path'], tab_data['content'])
+                # Восстанавливаем вкладки только если их нет
+                if not self.editor.tab_manager.tabs:
+                    for tab_data in session_data.get('tabs', []):
+                        self.editor.tab_manager.new_tab(tab_data['file_path'], tab_data['content'])
                     
                 if self.editor.auto_save:
                     self.editor.autosave_manager.start_autosave()

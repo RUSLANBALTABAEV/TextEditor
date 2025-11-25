@@ -42,6 +42,8 @@ class TextEditor:
         self.setup_icon()
         self.setup_ui()
         self.setup_bindings()
+        
+        # Загружаем сессию ПОСЛЕ настройки UI
         self.session_manager.load_session()
         
     def setup_directories(self):
@@ -99,7 +101,7 @@ class TextEditor:
          self.root.bind('<Control-v>', lambda e: self.editor_commands.paste())
          self.root.bind('<Control-a>', lambda e: self.editor_commands.select_all())
          self.root.bind('<Control-f>', lambda e: self.search_replace.find_text())
-         self.root.bind('<Control-h>', lambda e: self.search_replace.replace_text())  # Исправлено!
+         self.root.bind('<Control-h>', lambda e: self.search_replace.replace_text())
          self.root.bind('<F5>', lambda e: self.editor_commands.insert_datetime())
          self.root.bind('<F1>', lambda e: self.menu_manager.show_help())
 
