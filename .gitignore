@@ -122,4 +122,3 @@ backups/*
 *.txt
 plugins
 plugins/*
-session.json
